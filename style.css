@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Raleway',sans-serif;
+    background-image: url(images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+}
+
+.bg-image {
+    display: none;
+}
+
+.menu-container {
+    background-color: hsl(228, 56%, 26%);
+    width: 65vw;
+    height: 210px;
+    min-width: 305px;
+    max-width: 325px;
+    border-radius: 10px 100px 10px 10px;
+}
+
+.menu-container>img {
+    display: block;
+    padding: 40px 32px 22px 32px;
+    margin-left: 10px;
+}
+
+.icon {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 40px;
+    margin-bottom: 26px;
+    align-items: flex-start;
+}
+
+li {
+    list-style: none;
+    background-color: hsl(229, 57%, 11%);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    border-radius: 8px;
+}
+
+/* Progress bar */
+
+.storage-container {
+    display: flex;
+    background-color: hsl(228, 56%, 26%);
+    height: 170px;
+    width: 65vw;
+    min-width: 305px;
+    max-width: 325px;
+    border-radius: 10px;
+    margin-top: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 52vw;
+    color: hsl(243, 100%, 93%);
+    font-size: 0.9rem;
+    min-width: 260px;
+    max-width: 260px;
+}
+
+.container > p{
+    text-align: center;
+}
+
+.capacity {
+    background-color: hsl(229, 57%, 11%);
+    height: 20px;
+    border-radius: 30px;
+    margin: 15px 0 5px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.used {
+    border-radius: 30px;
+    height: 14px;
+    width: 75%;
+    margin-left: 3px;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 100%;
+    height: 10px;
+    width: 10px;
+    background-color: hsl(243, 100%, 93%);
+    right: 2px;
+    bottom: 2.5px;
+    z-index: 2;
+}
+
+h5 {
+    display: inline-block;
+}
+
+.legend{
+    display: flex;
+    justify-content: space-between;
+}
+
+.b-wrapper {
+    position: absolute;
+    bottom: -115px;
+    left: 46px;
+}
+
+.bubble {
+    position: relative;
+    border-radius: .6rem;
+    bottom: 0;
+    width: 175px;
+    height: 75px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.s-text {
+    color: hsl(229, 7%, 55%);
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.b-text {
+    color: black;
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-right: 10px;
+}
+
+.attribution{
+    color: white;
+    font-size: 0.9rem;
+}
+
+.attribution a{
+    text-decoration: none;
+    color: hsl(243, 100%, 93%);
+}
+
+@media only screen and (min-width: 700px) {
+    body {
+        background-color: hsl(229, 57%, 11%);
+        background-image: unset;
+    }
+
+    .bg-image {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        height: 50vh;
+        z-index: -1;
+        display: block;
+        min-height: 301px;
+    }
+
+    main {
+        height: 95vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    /* Menu container */
+
+    .menu-container {
+        width: 30vw;
+        height: 200px;
+        margin-right: 25px;
+        min-width: 285px;
+    }
+
+    .menu-container>img {
+        display: block;
+        margin: 35px;
+        margin-left: 45px;
+        padding: 0;
+    }
+
+    /* Storage container */
+
+    .storage-container {
+        width: 55vw;
+        margin-top: 33px;
+        min-width: unset;
+        max-width: 552px;
+    }
+
+    /* Progress bar */
+
+    .container {
+        width: 45vw;
+        max-width: 455px;
+    }
+
+    .container>p {
+        text-align: left;
+    }
+
+    /* Bubble */
+
+    .b-wrapper {
+        top: -115px;
+        right: 5px;
+        bottom: unset;
+        left: unset;
+    }
+
+    .bubble {
+        border-radius: .6rem .6rem 0 .6rem;
+    }
+
+    .bubble:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border: 25px solid transparent;
+        border-right-color: white;
+        border-top: 0;
+        margin-bottom: -23px;
+    }
+
+} 
